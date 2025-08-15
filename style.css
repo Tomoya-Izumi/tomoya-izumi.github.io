@@ -1,0 +1,100 @@
+/* 全体のレイアウト */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* コンテンツ幅の制限 */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f3f7f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*ヘッダーのデザイン*/
+header {
+    width: 80%;
+    background-color: #41956a;
+    color: #f3f7f9;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/*ナビゲーションバー*/
+nav {
+    background-color: #9ecda5;
+    color: #f3f7f9;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #f3f7f9;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddefe3;
+    border-radius: 5px;
+}
+
+/* フッターのデザイン */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* 所属を２列に (一番最初がずれちゃうのを調整したい) */
+#portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#portfolio p {
+    background-color: #ddefe3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* セクションやヘッダーに背景画像を追加 */
+header {
+    background-image: url('header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* モバイル端末での表示に対応 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        width: 90%;
+    }
+}
